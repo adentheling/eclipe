@@ -17,14 +17,14 @@ Eclipe is a collection of Python scripts for generating, manipulating, and visua
   - [3dmodelwrappy.py](#3dmodelwrappypy)
   - [checkcsv.py](#checkcsvpy)
   - [checkcsvMATPLOT.py](#checkcsvmatplotpy)
+  - [csvdistances.py](#csvdistancespy)
   - [eclipgen.py](#eclipgenpy)
   - [in to bbox.py](#in-to-bboxpy)
   - [main.py](#mainpy)
-  - [out to in spiral.py](#out-to-in-spiralpy)
+  - [out to bbox.py](#out-to-bboxpy)
   - [spiral to SVG.py](#spiral-to-svgpy)
   - [spiraleclipSPACINGEQUALPOINT.py](#spiraleclipspacingequalpointpy)
 - [Usage Examples](#usage-examples)
-
 
 ## Prerequisites
 
@@ -85,6 +85,17 @@ cd eclipe
   python checkcsvMATPLOT.py
   ```
 
+### csvdistances.py
+- **Purpose:** 
+  - Reads 3D sticker coordinates from a CSV file (e.g., `sticker_coordinates.csv`).
+  - Calculates the Euclidean distance between each consecutive pair of points.
+  - Appends the distance to the same row in the new CSV file.
+  - Exports the new CSV with coordinates and their respective distances.
+- **Usage:**  
+  ```bash
+  python csvdistances.py
+  ```
+
 ### eclipgen.py
 - **Purpose:** 
   - Generates evenly spaced points along an ellipse.
@@ -111,21 +122,21 @@ cd eclipe
 - **Purpose:** 
   - Provides functions to calculate ellipse coordinates.
   - Prints the coordinates to the console.
-  - Draws the ellipse points using Turtle graphics.
+  - Draws the ellipse points using Plotly graphics.
 - **Usage:**  
   ```bash
   python main.py
   ```
-  > **Note:** This script requires user input for the semi-major and semi-minor axes.
+  > **Note:** update each code before running first
 
-### out to in spiral.py
+### out to bbox.py
 - **Purpose:** 
   - Generates nested ellipses starting from an outer ellipse and gradually reducing until the final transition reaches (0,0).
   - Exports the inner ellipse points (excluding the outermost ellipse) to `ellipse_points.csv`.
   - Visualizes the transition using Matplotlib.
 - **Usage:**  
   ```bash
-  python "out to in spiral.py"
+  python "out to bbox.py"
   ```
 
 ### spiral to SVG.py
@@ -173,7 +184,13 @@ cd eclipe
    python checkcsvMATPLOT.py
    ```
 
-5. **Creating Nested Ellipses with Scarf Joints**  
+5. **Calculating Distances Between Points**  
+   Calculate the distances between each consecutive point and save the results in a new CSV:
+   ```bash
+   python csvdistances.py
+   ```
+
+6. **Creating Nested Ellipses with Scarf Joints**  
    Generate and view nested ellipses, then export the points:
    - For an "in to bounding" version:  
      ```bash
@@ -191,4 +208,3 @@ cd eclipe
      ```bash
      python spiraleclipSPACINGEQUALPOINT.py
      ```
-

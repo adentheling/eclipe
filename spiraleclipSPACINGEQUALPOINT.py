@@ -82,12 +82,12 @@ def draw_nested_ellipses_with_scarf(a, b, spacing, bbox_a, bbox_b, ax, y_offset_
 
 # Main function
 def main():
-    a = 6  # Initial semi-major axis a gotta be bigger than b 
+    a = 60  # Initial semi-major axis a gotta be bigger than b 
     b = 2  # Initial semi-minor axis
-    spacing = 5  # Spacing between ellipses
+    spacing = 10  # Spacing between ellipses
     bbox_a = a * 21  # Bounding ellipse semi-major axis
     bbox_b = b * 21  # Bounding ellipse semi-minor axis
-    csv_point_reduction_factor = 1  # Adjust how many points are saved in CSV
+    csv_point_reduction_factor = 50  # Adjust how many points are saved in CSV
     y_offset_percentage = 25  # Percentage to move the diagram up (e.g., 30%)
 
     # Set up the plot with full-screen size

@@ -144,8 +144,8 @@ def main():
     original_x, original_y = read_points_from_csv("ellipse_points.csv")
     
     # Parameters
-    rotation_angle_degrees = 30    # Rotation before mapping
-    cylinder_radius = 20           # Constant radius of cylinder
+    rotation_angle_degrees = 60    # Rotation before mapping
+    cylinder_radius = 2000           # Constant radius of cylinder
     
     # Rotate flat points
     rotated_x, rotated_y = rotate_points(original_x, original_y, rotation_angle_degrees)
