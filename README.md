@@ -1,4 +1,3 @@
-```markdown
 # Eclipe
 
 Eclipe is a collection of Python scripts for generating, manipulating, and visualizing ellipses, spirals, and their transformations. This project includes tools that:
