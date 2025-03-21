@@ -50,6 +50,34 @@ git clone https://github.com/adentheling/eclipe.git
 cd eclipe
 ```
 
+### Highly Recommended: Use Visual Studio Code (VSCode)
+
+We highly recommend using [Visual Studio Code (VSCode)](https://code.visualstudio.com/) to develop and run these scripts. VSCode is a powerful, lightweight code editor that supports Python development with features like IntelliSense, debugging, Git integration, and extensions for Python development.
+
+#### Steps to Set Up VSCode:
+
+1. **Download and Install VSCode:**
+   - [Download VSCode for your platform](https://code.visualstudio.com/download)
+   - Follow the installation instructions for your operating system.
+
+2. **Install Python Extension:**
+   - Open VSCode.
+   - Go to the Extensions view (`Ctrl+Shift+X`), search for `Python`, and install the extension provided by Microsoft.
+
+3. **Open the Project in VSCode:**
+   - In VSCode, go to `File > Open Folder` and select the `eclipe` folder you cloned.
+   
+4. **Install Python in VSCode:**
+   - Open the terminal in VSCode (`Ctrl+` `), then run the following command to install necessary dependencies:
+     ```bash
+     pip install numpy matplotlib plotly
+     ```
+   
+5. **Run the Scripts:**
+   - Open any Python script in VSCode and click the green play button (`Run`) in the top-right corner to run the script.
+
+For more details on how to get started with VSCode, check out the [official documentation](https://code.visualstudio.com/docs/python/python-tutorial).
+
 ## Scripts Overview
 
 ### 3dcsvplot.py
@@ -122,12 +150,12 @@ cd eclipe
 - **Purpose:** 
   - Provides functions to calculate ellipse coordinates.
   - Prints the coordinates to the console.
-  - Draws the ellipse points using Plotly graphics.
+  - Draws the ellipse points using plotly graphics.
 - **Usage:**  
   ```bash
   python main.py
   ```
-  > **Note:** update each code before running first
+  > **Note:** This script requires user input in each code
 
 ### out to bbox.py
 - **Purpose:** 
